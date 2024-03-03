@@ -1,0 +1,15 @@
+.btn-handler {
+    width: 200px;
+    height: 60px;
+    font-size: 30px;
+  }
+
+.background-green {
+    background-color: rgb(23, 220, 23);
+}
+
+.shiny {
+    background-color: rgb(192, 192, 31);
+    color: white;
+    font-size: 30px;
+}
