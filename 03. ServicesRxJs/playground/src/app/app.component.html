@@ -1,0 +1,9 @@
+{{title}}
+
+<app-user-list [users]="appUsers"></app-user-list>
+
+<div>
+  <input type="text" placeholder="name" #inputName />
+  <input type="text" placeholder="age" #inputAge />
+  <button (click)="setUsers(inputName, inputAge)">Add User</button>
+</div>
