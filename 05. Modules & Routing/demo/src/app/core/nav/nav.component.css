@@ -1,0 +1,11 @@
+.nav-btn {
+  margin: 20px;
+  padding: 20px;
+  background-color: greenyellow;
+  color: #fff;
+  width: fit-content;
+}
+
+.nav-btn:hover {
+  background-color: gold;
+}
