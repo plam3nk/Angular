@@ -1,0 +1,40 @@
+<h3 appHighlight>Hello directives</h3>
+<p appHighlight>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+<hr>
+
+<div appMyRouterLink="/login">Login</div>
+<div appMyRouterLink="/register">Register</div>
+
+<hr>
+
+<div *ngIf="true">Simple div</div>
+
+<ng-template [ngIf]="true">
+    <div *ngIf="true">Simple div 2</div>
+</ng-template>
+
+<button (click)="toggle()">Toggle</button>
+
+<!-- Custom Directives -->
+
+<!-- Usage 1 -->
+<div *appMyStructure="isShown">Structural Directive - 1</div>
+
+<!-- Usage 2 -->
+
+<ng-template [appMyStructure]="isShown" let-testMe="myCustomValue" let-myNumber="myNum" #directiveRef="appMyStructure">
+    <div>Structural Directive - 2</div>
+
+    <div>myCustomValue: {{testMe}}</div>
+    <div>myNum: {{ myNumber }}</div>
+</ng-template>
+
+<button (click)="simpleClick(directiveRef)">Simple Click</button>
+
+<!-- Usage 3 -->
+<ng-template #tmp>
+    <div>Structural Directive - 3</div>
+</ng-template>
+
+<ng-container [appMyStructure]="isShown" [myTmpRef]="tmp" />
