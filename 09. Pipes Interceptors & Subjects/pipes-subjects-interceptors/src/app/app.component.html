@@ -4,3 +4,32 @@
 <div>{{user.list | reduce : sum : 0}}</div>
 
 <button (click)="addProperty()">Add Property</button>
+
+<div>Promise: {{p | async}}</div>
+
+<div>Clock: {{time$ | async|date : "hh:mm:ss"}}</div>
+
+<hr>
+<div>
+  <a routerLink="/">Home</a>
+</div>
+
+<div>
+  <a routerLink="/lazy">Lazy</a>
+</div>
+
+<router-outlet></router-outlet>
+
+<hr>
+
+<div *ngIf="isLoading$ | async">Loading...</div>
+<div *ngIf="!(isLoading$ | async)">{{user$ | async | json}}</div>
+
+
+<button *ngIf="(user$ | async) === null" (click)="loadUsers()">
+  Load Users
+</button>
+
+<button *ngIf="(user$ | async) !== null" (click)="reloadUsers()">
+  Reload Users
+</button>
