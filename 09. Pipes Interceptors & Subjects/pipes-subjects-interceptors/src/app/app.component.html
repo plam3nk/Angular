@@ -1,0 +1,6 @@
+<div>{{ user | json }}</div>
+<hr>
+
+<div>{{user.list | reduce : sum : 0}}</div>
+
+<button (click)="addProperty()">Add Property</button>
